@@ -62,7 +62,64 @@ If parameter `columns` is empty, PyWaffle uses absolute number in `values` as bl
 
 If `values` is a dict, its keys are used as labels.
 
-### 3. Title, Legend, Colors and Background Color
+### 3. Plot waffles in different direction
+
+```python
+data = {'Democratic': 48, 'Republican': 46, 'Libertarian': 3}
+fig = plt.figure(
+    FigureClass=Waffle,
+    rows=5,
+    values=data,
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1.1, 1)},
+    plot_direction='NW'
+)
+plt.show()
+```
+Starting plots from Northwest.
+
+
+```python
+data = {'Democratic': 48, 'Republican': 46, 'Libertarian': 3}
+fig = plt.figure(
+    FigureClass=Waffle,
+    rows=5,
+    values=data,
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1.1, 1)},
+    plot_direction='SW'
+)
+plt.show()
+```
+Starting plots from Southwest.
+
+```python
+data = {'Democratic': 48, 'Republican': 46, 'Libertarian': 3}
+fig = plt.figure(
+    FigureClass=Waffle,
+    rows=5,
+    values=data,
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1.1, 1)},
+    plot_direction='NE'
+)
+plt.show()
+```
+Starting plots from Northeast.
+
+```python
+data = {'Democratic': 48, 'Republican': 46, 'Libertarian': 3}
+fig = plt.figure(
+    FigureClass=Waffle,
+    rows=5,
+    values=data,
+    legend={'loc': 'upper left', 'bbox_to_anchor': (1.1, 1)},
+    plot_direction='SW'
+)
+plt.show()
+```
+Starting plots from Southeast.
+
+
+
+### 4. Title, Legend, Colors and Background Color
 
 ```python
 data = {'Democratic': 48, 'Republican': 46, 'Libertarian': 3}
@@ -84,7 +141,8 @@ plt.show()
 
 It is now clear to see that there are 3% votes to other parties/candidates.
 
-### 4. Icons
+
+### 5. Icons
 
 ```python
 data = {'Democratic': 48, 'Republican': 46, 'Libertarian': 3}
@@ -103,7 +161,7 @@ fig = plt.figure(
 
 PyWaffle supports [Font Awesome](http://fontawesome.io/) icons in the chart.
 
-### 5. Multiple Plots
+### 6. Multiple Plots
 
 ```python
 import pandas as pd
